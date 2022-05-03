@@ -8,10 +8,10 @@ import { OrbitControls, Stars } from '@react-three/drei';
 
 function App() {
   return (
-    <div className="App">
-    <Canvas>
+    <div className='App'>
+      <Canvas>
         <OrbitControls enableZoom={true} />
-        <Stars/>
+        <Stars />
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <Suspense>
@@ -19,7 +19,6 @@ function App() {
           <AnimatedSphereSmall />
         </Suspense>
       </Canvas>
-
     </div>
   );
 }
