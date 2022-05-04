@@ -5,6 +5,7 @@ import AnimatedSphere from './components/animatedSphere';
 import AnimatedSphereSmall from './components/animatedSphereSmall';
 
 import { OrbitControls, Stars } from '@react-three/drei';
+import TextCard from './components/textCard';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Suspense>
           <AnimatedSphere />
           <AnimatedSphereSmall />
+          <TextCard/>
         </Suspense>
       </Canvas>
     </div>
