@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sphere } from '@react-three/drei';
-import Texture from '../assets/images/OutdoorFloor3.jpg';
+import Texture from '../assets/images/sun.webp';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 

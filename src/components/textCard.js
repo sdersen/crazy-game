@@ -10,7 +10,7 @@ export default function TextCard() {
   const font = new FontLoader().parse(roboto);
   return (
     <mesh position={[0, 0, 7]}>
-      <textGeometry args={['test', { font, size: 1, height: 0.2 }]} />
+      <textGeometry args={['test', { font, size: 3, height: 0.3 }]} />
       <meshPhysicalMaterial attach="material" color={'white'} />
     </mesh>
   );
