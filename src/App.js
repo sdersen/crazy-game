@@ -6,7 +6,7 @@ import AnimatedSphereSmall from './components/animatedSphereSmall';
 
 import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
-
+//change for lint
 function App() {
   return (
     <div className="App">
