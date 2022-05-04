@@ -9,7 +9,7 @@ import TextCard from './components/textCard';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Canvas>
         <OrbitControls enableZoom={true} />
         <Stars />
@@ -18,7 +18,7 @@ function App() {
         <Suspense>
           <AnimatedSphere />
           <AnimatedSphereSmall />
-          <TextCard/>
+          <TextCard />
         </Suspense>
       </Canvas>
     </div>
