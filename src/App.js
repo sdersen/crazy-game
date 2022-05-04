@@ -3,7 +3,7 @@ import './App.css';
 import { Canvas } from '@react-three/fiber';
 import AnimatedSphere from './components/animatedSphere';
 import AnimatedSphereSmall from './components/animatedSphereSmall';
-
+import * as THREE from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
 
