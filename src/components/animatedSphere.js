@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { Sphere } from '@react-three/drei';
 import Texture from '../assets/images/sun.webp';
 import { useLoader, useFrame } from '@react-three/fiber';
@@ -12,7 +12,7 @@ export default function AnimatedSphere(props) {
   return (
     <Sphere ref={sphere} visible args={[1, 200, 400]} scale={2}>
       <meshStandardMaterial map={colorMap} />
-      <pointLight color="orange" intensity={4} distance={500}/>
+      <pointLight color="orange" intensity={4} distance={500} />
       <ambientLight intensity={0.3} />
     </Sphere>
   );
