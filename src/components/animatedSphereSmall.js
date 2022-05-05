@@ -8,7 +8,6 @@ export default function AnimatedSphere() {
   const colorMap = useLoader(TextureLoader, Texture);
 
   return (
-
     <>
       <mesh position={[0, 0, 5]}>
         <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
@@ -27,6 +26,5 @@ export default function AnimatedSphere() {
      roughness={0}
      /> */
     //    </Sphere>
-
   );
 }
