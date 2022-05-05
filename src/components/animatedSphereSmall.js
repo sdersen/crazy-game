@@ -1,5 +1,5 @@
 import React from 'react';
-import Texture from '../assets/images/OutdoorFloor3.jpg';
+import Texture from '../assets/images/mercury.webp';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import Orbit from './Orbit';
@@ -8,6 +8,7 @@ export default function AnimatedSphere() {
   const colorMap = useLoader(TextureLoader, Texture);
 
   return (
+
     <>
       <mesh position={[0, 0, 5]}>
         <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
@@ -26,5 +27,6 @@ export default function AnimatedSphere() {
      roughness={0}
      /> */
     //    </Sphere>
+
   );
 }
