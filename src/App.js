@@ -13,8 +13,9 @@ function App() {
       <Canvas>
         <OrbitControls enableZoom={true} />
         <Stars />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} intensity={1} />
+        {/* <pointLight color="white" intensity={1} position={[20, 20, 20]} distance={300}/> */}
+        <ambientLight intensity={0.2} />
+        {/* <directionalLight position={[-2, 5, 2]} intensity={1} /> */}
         <Suspense>
           <AnimatedSphere />
           <AnimatedSphereSmall />
