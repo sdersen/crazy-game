@@ -15,6 +15,8 @@ Add the installation instructions.
 -   [#3 - Orbit for planet.](https://github.com/sdersen/crazy-game/pull/1)
 -   [#4 - Sun as light and planet rotation on Y-axis.](https://github.com/sdersen/crazy-game/pull/4)
 -   [#5 - Orbit on Jupiter and name changes.](https://github.com/sdersen/crazy-game/pull/5)
+-   [#6 - Venus and it's orbot](https://github.com/sdersen/crazy-game/pull/6)
+-   [#7 - Neptune and it's orbit](https://github.com/sdersen/crazy-game/pull/7)
 
 # Code Review
 
