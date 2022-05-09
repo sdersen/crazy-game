@@ -1,17 +1,23 @@
 import React, { useRef } from 'react';
-import Texture from '../../assets/images/mercury.webp';
-import { useLoader, useFrame } from '@react-three/fiber';
-import { TextureLoader } from 'three/src/loaders/TextureLoader';
+
+import { useFrame } from '@react-three/fiber';
+import MercuryMass from './MercuryMass';
 
 export default function Mercury(props) {
-  const colorMap = useLoader(TextureLoader, Texture);
   const mesh = useRef();
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
+  // 4332 dagar runt solen
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 5]}>
+    <mesh
+      ref={mesh}
+      position={[0, 0, 0]}
+      visible
+      args={[1, 200, 400]}
+      scale={1}
+    >
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
-      <meshStandardMaterial map={colorMap} />
+      <MercuryMass />
     </mesh>
   );
 }
