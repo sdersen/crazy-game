@@ -12,7 +12,7 @@ export default function Sun(props) {
   return (
     <Sphere ref={sphere} visible args={[1, 200, 400]} scale={2}>
       <meshStandardMaterial map={colorMap} />
-      <pointLight color="orange" intensity={4} distance={500} />
+      <pointLight color="orange" intensity={4} distance={1000} />
       <ambientLight intensity={0.3} />
     </Sphere>
   );
