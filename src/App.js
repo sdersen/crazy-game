@@ -12,6 +12,7 @@ import Mercury from './components/Mercury/Mercury';
 import Earth from './components/Earth/Earth';
 import Neptune from './components/Neptune/neptune';
 import Mars from './components/Mars/Mars';
+import Uranus from './components/Uranus/Uranus';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Earth />
           <Mars />
           <Jupiter />
-
+          <Uranus />
           <Venus />
           <Neptune />
         </Suspense>
