@@ -8,6 +8,7 @@ import TextCard from './components/textCard';
 import Jupiter from './components/Jupiter/Jupiter';
 import Venus from './components/Venus/venus';
 import Earth from './components/Earth/Earth';
+import Neptune from './components/Neptune/neptune';
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
           <TextCard />
           <Earth />
           <Jupiter />
-          <Venus />
+
+          <Venus/>
+          <Neptune/>
         </Suspense>
       </Canvas>
     </div>
