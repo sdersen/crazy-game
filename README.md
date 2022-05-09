@@ -10,7 +10,11 @@ Add the installation instructions.
 
 # Changelog
 
--   [#1 - Add a link to each pull request with a descriptive line.](#1)
+-   [#1 - React set-up, created canvas, spher and stary skies.](https://github.com/sdersen/crazy-game/pull/1)
+-   [#2 - Added textures and Roboto-fonts.](https://github.com/sdersen/crazy-game/pull/2)
+-   [#3 - Orbit for planet.](https://github.com/sdersen/crazy-game/pull/1)
+-   [#4 - Sun as light and planet rotation on Y-axis.](https://github.com/sdersen/crazy-game/pull/4)
+-   [#5 - Orbit on Jupiter and name changes.](https://github.com/sdersen/crazy-game/pull/5)
 
 # Code Review
 
