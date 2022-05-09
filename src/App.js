@@ -7,6 +7,7 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
 import Jupiter from './components/Jupiter/Jupiter';
 import Venus from './components/Venus/venus';
+import Neptune from './components/Neptune/neptune';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <TextCard />
           <Jupiter />
           <Venus/>
+          <Neptune/>
         </Suspense>
       </Canvas>
     </div>
