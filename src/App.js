@@ -1,25 +1,24 @@
 import React, { Suspense } from 'react';
 import './App.css';
 import { Canvas } from '@react-three/fiber';
-import AnimatedSphere from './components/animatedSphere';
-import AnimatedSphereSmall from './components/animatedSphereSmall';
-import * as THREE from 'three';
+import Sun from './components/Sun';
+import AnimatedSphereSmall from './components/Mercury/mercury';
 import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
-//change for lint
+import Jupiter from './components/Jupiter/Jupiter';
+
 function App() {
   return (
     <div className="App">
       <Canvas>
         <OrbitControls enableZoom={true} />
         <Stars />
-        {/* <pointLight color="white" intensity={1} position={[20, 20, 20]} distance={300}/> */}
         <ambientLight intensity={0.2} />
-        {/* <directionalLight position={[-2, 5, 2]} intensity={1} /> */}
         <Suspense>
-          <AnimatedSphere />
+          <Sun />
           <AnimatedSphereSmall />
           <TextCard />
+          <Jupiter />
         </Suspense>
       </Canvas>
     </div>

@@ -4,7 +4,7 @@ import Texture from '../assets/images/sun.webp';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
-export default function AnimatedSphere(props) {
+export default function Sun(props) {
   const sphere = useRef();
   useFrame((state, delta) => (sphere.current.rotation.y += 0.005));
 
