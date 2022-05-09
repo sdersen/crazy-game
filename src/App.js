@@ -11,6 +11,7 @@ import Mercury from './components/Mercury/Mercury';
 
 import Earth from './components/Earth/Earth';
 import Neptune from './components/Neptune/neptune';
+import Mars from './components/Mars/Mars';
 
 function App() {
   return (
@@ -24,11 +25,11 @@ function App() {
           <Mercury />
           <TextCard />
           <Earth />
+          <Mars />
           <Jupiter />
 
-
-          <Venus/>
-          <Neptune/>
+          <Venus />
+          <Neptune />
         </Suspense>
       </Canvas>
     </div>
