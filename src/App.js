@@ -6,6 +6,7 @@ import AnimatedSphereSmall from './components/Mercury/mercury';
 import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
 import Jupiter from './components/Jupiter/Jupiter';
+import Venus from './components/Venus/venus';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <AnimatedSphereSmall />
           <TextCard />
           <Jupiter />
+          <Venus/>
         </Suspense>
       </Canvas>
     </div>

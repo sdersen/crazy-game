@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-import JupiterMass from './jupiterMass';
+import JupiterMass from './venusMass';
 import { useFrame } from '@react-three/fiber';
 
-export default function Jupiter(props) {
+export default function Venus(props) {
   const mesh = useRef();
-  // 4332 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  // 224 dagar runt solen
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.1));
 
   return (
     <mesh
@@ -13,7 +13,7 @@ export default function Jupiter(props) {
       position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
-      scale={2}
+      scale={1}
     >
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <JupiterMass />
