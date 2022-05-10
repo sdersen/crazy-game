@@ -7,7 +7,7 @@ function SinglePlanet() {
   return (
     <div className="App">
       <Canvas>
-        <OrbitControls enableZoom={true} />
+        <OrbitControls />
         <Stars />
         <ambientLight intensity={0.5} />
         <Suspense>
