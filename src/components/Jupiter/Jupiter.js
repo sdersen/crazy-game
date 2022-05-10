@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import JupiterMass from './jupiterMass';
 import { useFrame } from '@react-three/fiber';
+import { navigate } from '@gatsbyjs/reach-router';
 
 export default function Jupiter(props) {
   const mesh = useRef();
@@ -9,6 +10,7 @@ export default function Jupiter(props) {
 
   return (
     <mesh
+      onClick={(event) => navigate('/jupiter')}
       ref={mesh}
       position={[0, 0, 0]}
       visible

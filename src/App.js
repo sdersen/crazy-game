@@ -24,7 +24,7 @@ function App() {
 
       <Router>
         <Home path="/" />
-        <SinglePlanet path="/earth" />
+        <SinglePlanet path="/:slug" />
       </Router>
     </div>
   );

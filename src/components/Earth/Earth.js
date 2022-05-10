@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
+import { navigate } from '@gatsbyjs/reach-router';
 
 export default function Earth(props) {
   const mesh = useRef();
-  // 4332 dagar runt solen
+  // 365 dagar runt solen
   useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
 
   return (
     <mesh
+      onClick={(event) => navigate('/terre')}
       ref={mesh}
       position={[0, 0, 0]}
       visible
