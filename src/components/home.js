@@ -5,7 +5,7 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
-import Mercury from './Mercury/mercury';
+import Mercury from './Mercury/Mercury';
 import Earth from './Earth/Earth';
 import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';

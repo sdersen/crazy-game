@@ -3,8 +3,6 @@ import './App.css';
 // import { Canvas } from '@react-three/fiber';
 import { Router } from '@gatsbyjs/reach-router';
 // import { OrbitControls, Stars } from '@react-three/drei';
-
-
 // import Sun from './components/Sun';
 // import TextCard from './components/textCard';
 // import Jupiter from './components/Jupiter/Jupiter';
@@ -17,11 +15,9 @@ import { Router } from '@gatsbyjs/reach-router';
 import SinglePlanet from './components/SinglePlanet/singelPlanet';
 import Home from './components/home';
 
-
 function App() {
   return (
     <div className="App">
-
       <Router>
         <Home path="/" />
         <SinglePlanet path="/earth" />
