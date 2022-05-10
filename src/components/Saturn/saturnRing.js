@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Texture from '../../assets/images/saturn_ring.webp';
-import { useLoader, useFrame } from '@react-three/fiber';
+import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 export default function SaturnMass(props) {
