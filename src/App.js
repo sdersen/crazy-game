@@ -7,12 +7,12 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import TextCard from './components/textCard';
 import Jupiter from './components/Jupiter/Jupiter';
 import Venus from './components/Venus/venus';
-import Mercury from './components/Mercury/Mercury';
-
+import Mercury from './components/Mercury/mercury';
 import Earth from './components/Earth/Earth';
 import Neptune from './components/Neptune/neptune';
 import Mars from './components/Mars/Mars';
 import Uranus from './components/Uranus/Uranus';
+import Saturn from './components/Saturn/staurn';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           <TextCard />
           <Earth />
           <Mars />
+          <Saturn />
           <Jupiter />
           <Uranus />
           <Venus />
