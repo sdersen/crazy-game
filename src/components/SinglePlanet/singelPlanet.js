@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 
 function SinglePlanet(props) {
   const [planet, setPlanet] = useState([]);
+
   let params = useParams();
 
   useEffect(() => {
@@ -21,7 +22,13 @@ function SinglePlanet(props) {
         <Stars />
         <ambientLight intensity={0.7} />
         <Suspense>
-          <TextCard name={planet.englishName} text={planet.bodyType} />
+          <TextCard
+          name={planet.englishName}
+          text={planet.bodyType}
+          gravity={planet.gravity}
+          orbit={planet.sideralOrbit}
+          hours={planet.sideralRotation}/>
+
         </Suspense>
       </Canvas>
     </div>
