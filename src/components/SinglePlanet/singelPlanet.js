@@ -1,17 +1,18 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
- import TextCard from '../textCard';
+import TextCard from '../textCard';
+import { useParams } from 'react-router-dom';
 
 function SinglePlanet(props) {
-
   const [planet, setPlanet] = useState([]);
+  let params = useParams();
 
   useEffect(() => {
-    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${props.slug}`)
+    fetch(`https://api.le-systeme-solaire.net/rest/bodies/${params.planet}`)
       .then((response) => response.json())
       .then((planet) => setPlanet(planet));
-  }, [props.slug]);
+  }, [params.planet]);
 
   return (
     <div className="App">
@@ -20,10 +21,7 @@ function SinglePlanet(props) {
         <Stars />
         <ambientLight intensity={0.7} />
         <Suspense>
-          <TextCard
-          name={planet.englishName}
-          text={planet.bodyType}
-          />
+          <TextCard name={planet.englishName} text={planet.bodyType} />
         </Suspense>
       </Canvas>
     </div>
