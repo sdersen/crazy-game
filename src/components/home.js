@@ -10,8 +10,14 @@ import Earth from './Earth/Earth';
 import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function Home(props) {
+  let navigate = useNavigate();
+
+  function nav(planet) {
+    navigate(planet);
+  }
   return (
     <div className="App">
       <Canvas>
@@ -23,7 +29,7 @@ function Home() {
           <Mercury />
           <Earth />
           <Mars />
-          <Jupiter />
+          <Jupiter handleClick={() => nav('/jupiter')} />
           <Uranus />
           <Venus />
           <Neptune />

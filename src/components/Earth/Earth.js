@@ -4,9 +4,9 @@ import EarthMass from './EarthMass';
 
 export default function Earth(props) {
   const mesh = useRef();
-  // 4332 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
+  // 365 dagar runt solen
 
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
   return (
     <mesh
       ref={mesh}
