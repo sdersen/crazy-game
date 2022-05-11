@@ -14,11 +14,10 @@ import { useNavigate } from 'react-router-dom';
 import IntroMusic from "../assets/audio/cosmic-glow.mp3"
 
 function Home(props) {
-  let navigate = useNavigate();
-
   let audio = new Audio(IntroMusic);
   audio.play();
-
+  
+  let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
   }
