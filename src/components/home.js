@@ -11,9 +11,13 @@ import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
 import { useNavigate } from 'react-router-dom';
+import IntroMusic from "../assets/audio/cosmic-glow.mp3"
 
 function Home(props) {
   let navigate = useNavigate();
+
+  let audio = new Audio(IntroMusic);
+  audio.play();
 
   function nav(planet) {
     navigate(planet);
