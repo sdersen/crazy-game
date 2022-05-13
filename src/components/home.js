@@ -18,13 +18,6 @@ import IntroMusic from '../assets/audio/cosmic-glow.mp3';
 function Home(props) {
   let audio = new Audio(IntroMusic);
 
-  function soundOff() {
-    audio.pause();
-  }
-  function soundOn() {
-    audio.play();
-  }
-
   let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
@@ -33,10 +26,6 @@ function Home(props) {
     position: 'absolute',
     top: '-300px',
     left: '-30px',
-  };
-  const btnStyle = {
-    backgroundColor: 'transparent',
-    border: 'none',
   };
 
   return (
@@ -47,8 +36,16 @@ function Home(props) {
         <ambientLight intensity={0.2} />
         <Html style={mystyle}>
           <div style={{ display: 'flex' }}>
-            <AiFillPlayCircle onClick={soundOn} size="40px" fill="white" />
-            <AiFillPauseCircle onClick={soundOff} size="40px" fill="white" />
+            <AiFillPlayCircle
+              onClick={() => audio.play()}
+              size="40px"
+              fill="white"
+            />
+            <AiFillPauseCircle
+              onClick={() => audio.pause()}
+              size="40px"
+              fill="white"
+            />
           </div>
         </Html>
         <Suspense>
