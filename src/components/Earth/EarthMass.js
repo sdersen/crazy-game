@@ -13,12 +13,12 @@ export default function EarthMass(props) {
     <mesh ref={mesh} position={[0, 0, 13]} scale={1}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
-      <Html>
+      {/* <Html>
         <div>
           <h1 style={{ color: 'white' }}>hel</h1>
           <p style={{ color: 'white' }}>text</p>
         </div>
-      </Html>
+      </Html> */}
     </mesh>
   );
 }
