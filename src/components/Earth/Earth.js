@@ -1,25 +1,20 @@
 import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
-import Sun from '../Sun';
 
 export default function Earth() {
   const [orbit, setOrbit] = useState(0.001);
   const getOrbit = async () => {
     const response = await fetch(
-      'https://api.le-systeme-solaire.net/rest/bodies/'
+      'https://api.le-systeme-solaire.net/rest/bodies/terre'
     );
     const data = await response.json();
-    console.log(data.bodies);
-    setOrbit(data.bodies[199].sideralOrbit);
+    console.log(data);
+    setOrbit(data.sideralOrbit / 100000);
   };
 
-  // useEffect(() => {
-  //   function getActivity() {}
-  //   getActivity();
-  // }, []);
   const mesh = useRef();
-  // 4332 dagar runt solen
+
   useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
