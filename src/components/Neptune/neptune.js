@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import NeptuneMass from './neptuneMass';
 import { useFrame } from '@react-three/fiber';
 
-export default function Neptune(props) {
+export default function Neptune({ state, delta, handleClick }) {
   const mesh = useRef();
   // 60000 dagar runt solen
   useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
 
   return (
     <mesh
+      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible

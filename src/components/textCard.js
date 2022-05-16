@@ -7,18 +7,20 @@ import { Html } from '@react-three/drei';
 
 extend({ TextGeometry });
 
-export default function TextCard({name, text}) {
-
+export default function TextCard({ name, text, gravity, orbit, hours }) {
   return (
     <mesh position={[0, 0, 0]} rotation={[0, 0, 0]}>
-      {/* <textGeometry
-        attach="geometry"
-        args={['test', { font, size: 1, height: 0.4 }]}
-      /> */}
-      <Html>
+      <Html style={{ top: '-200px' }}>
         <div>
           <h1 style={{ color: 'white' }}>{name}</h1>
-          <p style={{ color: 'white' }}>{text}</p>
+          <h3 style={{ color: 'white' }}>Body type:</h3>
+          <p style={{ color: 'white' }}> {text}</p>
+          <h3 style={{ color: 'white' }}>Gravity:</h3>
+          <p style={{ color: 'white' }}> {gravity}m.s-2</p>
+          <h3 style={{ color: 'white' }}>Orbit around sun:</h3>
+          <p style={{ color: 'white' }}>{orbit} earth days</p>
+          <h3 style={{ color: 'white' }}>Hours in a day:</h3>
+          <p style={{ color: 'white' }}>{hours} h</p>
         </div>
       </Html>
       <meshPhysicalMaterial attach="material" color={'white'} />
