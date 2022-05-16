@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-
+import Button from './Button/button';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
@@ -18,6 +18,7 @@ function Home() {
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
+        <Button position={[1.2, 10, 0]} />
         <Suspense>
           <Sun />
           <Mercury />

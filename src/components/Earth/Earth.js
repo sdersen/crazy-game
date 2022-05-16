@@ -5,7 +5,6 @@ import Sun from '../Sun';
 
 export default function Earth() {
   const [orbit, setOrbit] = useState(0.001);
-
   const getOrbit = async () => {
     const response = await fetch(
       'https://api.le-systeme-solaire.net/rest/bodies/'
