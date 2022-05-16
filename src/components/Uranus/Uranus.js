@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import UranusMass from './UranusMass';
 import { useFrame } from '@react-three/fiber';
 
-export default function Uranus(props) {
+export default function Uranus({ state, delta, handleClick }) {
   const mesh = useRef();
 
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
     <mesh
+      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible

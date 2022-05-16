@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import JupiterMass from './venusMass';
 import { useFrame } from '@react-three/fiber';
 
-export default function Venus(props) {
+export default function Venus({ state, delta, handleClick }) {
   const mesh = useRef();
   // 224 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.05));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
 
   return (
     <mesh
+      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible

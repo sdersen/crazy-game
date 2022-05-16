@@ -3,13 +3,14 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import MercuryMass from './MercuryMass';
 
-export default function Mercury(props) {
+export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
   // 4332 dagar runt solen
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
     <mesh
+      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible

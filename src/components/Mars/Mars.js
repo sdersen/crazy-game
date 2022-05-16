@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import MarsMass from './MarsMass';
 import { useFrame } from '@react-three/fiber';
 
-export default function Mars(props) {
+export default function Mars({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.03));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.003));
 
   return (
     <mesh
+      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible
