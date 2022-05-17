@@ -1,26 +1,34 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars, Html } from '@react-three/drei';
+
+import { useFrame } from '@react-three/fiber';
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { AiFillPauseCircle } from 'react-icons/ai';
 
+import Button from './Button/button';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
-import Mercury from './Mercury/mercury';
+import Mercury from './Mercury/Mercury';
 import Earth from './Earth/Earth';
 import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
 import Saturn from './Saturn/staurn';
 import Introtext from './introtext';
-
 import { useNavigate } from 'react-router-dom';
 import IntroMusic from '../assets/audio/cosmic-glow.mp3';
 
-function Home(props) {
+function Home() {
   let audio = new Audio(IntroMusic);
 
+  let [trueOrbit, setTrueOrbit] = useState(false);
+  function parentToChild() {
+    setTrueOrbit(true);
+    console.log('gggg');
+  }
+  //hej
   let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
@@ -51,11 +59,12 @@ function Home(props) {
             />
           </div>
         </Html>
+        <Button handleClick={parentToChild} />
         <Suspense>
           <Introtext />
           <Sun />
-          <Mercury handleClick={() => nav('/jupiter')} />
-          <Earth handleClick={() => nav('/terre')} />
+          <Mercury handleClick={() => nav('/mercury')} />
+          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
           <Jupiter handleClick={() => nav('/jupiter')} />
           <Uranus handleClick={() => nav('/uranus')} />
