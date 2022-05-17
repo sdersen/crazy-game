@@ -29,6 +29,11 @@ function Home() {
   function nav(planet) {
     navigate(planet);
   }
+  const mystyle = {
+    position: 'absolute',
+    top: '-300px',
+    left: '-30px',
+  };
 
   return (
     <div className="App">
