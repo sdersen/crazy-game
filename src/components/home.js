@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { Html, OrbitControls, Stars } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import Button from './Button/button';
 import Sun from './Sun';
@@ -33,6 +33,20 @@ function Home() {
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
+        <Html style={mystyle}>
+          <div style={{ display: 'flex' }}>
+            <AiFillPlayCircle
+              onClick={() => audio.play()}
+              size="40px"
+              fill="white"
+            />
+            <AiFillPauseCircle
+              onClick={() => audio.pause()}
+              size="40px"
+              fill="white"
+            />
+          </div>
+        </Html>
         <Button handleClick={parentToChild} />
         <Suspense>
           <Sun />
