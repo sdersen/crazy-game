@@ -21,7 +21,6 @@ function Home() {
     setTrueOrbit(true);
     console.log('gggg');
   }
-
   //hej
   let navigate = useNavigate();
   function nav(planet) {
