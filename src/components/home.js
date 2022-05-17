@@ -19,6 +19,8 @@ import Saturn from './Saturn/staurn';
 import { useNavigate } from '@gatsbyjs/reach-router';
 
 function Home() {
+  let audio = new Audio(IntroMusic);
+
   let [trueOrbit, setTrueOrbit] = useState(false);
   function parentToChild() {
     setTrueOrbit(true);
