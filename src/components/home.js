@@ -2,6 +2,9 @@ import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Html, OrbitControls, Stars } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import { AiFillPlayCircle } from 'react-icons/ai';
+import { AiFillPauseCircle } from 'react-icons/ai';
+
 import Button from './Button/button';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
