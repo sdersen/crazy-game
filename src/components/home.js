@@ -22,6 +22,7 @@ function Home() {
     console.log('gggg');
   }
 
+  //hej
   let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
