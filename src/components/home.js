@@ -11,6 +11,9 @@ import Earth from './Earth/Earth';
 import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
+import Saturn from './Saturn/staurn';
+
+import { useNavigate } from '@gatsbyjs/reach-router';
 
 function Home() {
   let [trueOrbit, setTrueOrbit] = useState(false);
@@ -18,6 +21,12 @@ function Home() {
     setTrueOrbit(true);
     console.log('gggg');
   }
+
+  let navigate = useNavigate();
+  function nav(planet) {
+    navigate(planet);
+  }
+
   return (
     <div className="App">
       <Canvas>
