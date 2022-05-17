@@ -1,24 +1,21 @@
 import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 
-export default function Button(props) {
+export default function Button({ handleClick }) {
   const ref = useRef();
 
   const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-
-  useFrame((state, delta) => (ref.current.rotation.x += 0.01));
 
   return (
     <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}
+      position={[1.2, 10, 0]}
+      // {...props}
+      // ref={ref}
+      onClick={handleClick}
+      // onPointerOver={(event) => hover(true)}
+      // onPointerOut={(event) => hover(false)}
     >
-      <boxGeometry args={[1, 1, 1]} />
+      <boxGeometry args={[10, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   );

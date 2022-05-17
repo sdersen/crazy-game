@@ -2,16 +2,21 @@ import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
 
-export default function Earth() {
+export default function Earth({ parentToChild }) {
   const [orbit, setOrbit] = useState(0.001);
+
   const getOrbit = async () => {
     const response = await fetch(
       'https://api.le-systeme-solaire.net/rest/bodies/terre'
     );
     const data = await response.json();
-    console.log(data);
+
     setOrbit(data.sideralOrbit / 100000);
   };
+  console.log(parentToChild);
+  if (parentToChild) {
+    getOrbit();
+  }
 
   const mesh = useRef();
 
@@ -24,7 +29,6 @@ export default function Earth() {
       visible
       args={[1, 200, 400]}
       scale={1}
-      onClick={() => getOrbit()}
     >
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <EarthMass />

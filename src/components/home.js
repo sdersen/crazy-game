@@ -1,6 +1,7 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 import Button from './Button/button';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
@@ -12,17 +13,22 @@ import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
 
 function Home() {
+  let [trueOrbit, setTrueOrbit] = useState(false);
+  function parentToChild() {
+    setTrueOrbit(true);
+    console.log('gggg');
+  }
   return (
     <div className="App">
       <Canvas>
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
-        <Button position={[1.2, 10, 0]} />
+        <Button handleClick={parentToChild} />
         <Suspense>
           <Sun />
           <Mercury />
-          <Earth />
+          <Earth parentToChild={trueOrbit} />
           <Mars />
           <Jupiter />
           <Uranus />
