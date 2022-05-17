@@ -27,13 +27,15 @@ function Home() {
         <Button handleClick={parentToChild} />
         <Suspense>
           <Sun />
-          <Mercury />
-          <Earth parentToChild={trueOrbit} />
-          <Mars />
-          <Jupiter />
-          <Uranus />
-          <Venus />
-          <Neptune />
+
+          <Mercury handleClick={() => nav('/mercury')} />
+          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
+          <Mars handleClick={() => nav('/mars')} />
+          <Jupiter handleClick={() => nav('/jupiter')} />
+          <Uranus handleClick={() => nav('/uranus')} />
+          <Saturn handleClick={() => nav('/saturn')} />
+          <Venus handleClick={() => nav('/venus')} />
+          <Neptune handleClick={() => nav('/netptune')} />
         </Suspense>
       </Canvas>
     </div>
