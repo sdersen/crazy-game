@@ -6,10 +6,10 @@ import SinglePlanet from './components/SinglePlanet/singelPlanet';
 import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path=":planet" element={<SinglePlanet />} />
+        <Route path='/' element={<Home />} />
+        <Route path=':planet' element={<SinglePlanet />} />
       </Routes>
     </div>
   );

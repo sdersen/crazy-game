@@ -5,7 +5,7 @@ import MercuryMass from './MercuryMass';
 
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
-  
+
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
@@ -17,7 +17,7 @@ export default function Mercury({ state, delta, handleClick }) {
       args={[1, 200, 400]}
       scale={1}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <MercuryMass />
     </mesh>
   );

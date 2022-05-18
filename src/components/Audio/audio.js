@@ -4,7 +4,5 @@ export default function Audio(props) {
   let audio = new Audio(IntroMusic);
   audio.play();
 
-  return <mesh>
-    
-  </mesh>;
+  return <mesh></mesh>;
 }
