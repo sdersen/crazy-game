@@ -68,7 +68,6 @@ function Home() {
             <GiSpeakerOff
               onClick={() => {
                 audio.current.pause();
-                console.log('off');
                 setPlay(false);
               }}
               size="30px"
