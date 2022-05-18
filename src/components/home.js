@@ -25,7 +25,6 @@ function Home() {
   function parentToChild() {
     trueOrbit ? setTrueOrbit(false) : setTrueOrbit(true);
   }
-  //hej
   let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
@@ -33,6 +32,11 @@ function Home() {
   const mystyle = {
     position: 'absolute',
     top: '-300px',
+    left: '-30px',
+  };
+  const textBoxStyle = {
+    position: 'absolute',
+    top: '-100px',
     left: '-30px',
   };
 
@@ -56,9 +60,9 @@ function Home() {
             />
           </div>
         </Html>
+        <Introtext style={textBoxStyle} />
         <Button handleClick={parentToChild} />
         <Suspense>
-          <Introtext />
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
