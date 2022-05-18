@@ -5,7 +5,7 @@ import SaturnMass from './saturnMass';
 
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
-  // 4332 dagar runt solen
+
   useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
 
   return (

@@ -1,8 +1,6 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars, Html } from '@react-three/drei';
-
-import { useFrame } from '@react-three/fiber';
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { AiFillPauseCircle } from 'react-icons/ai';
 
@@ -10,7 +8,7 @@ import Button from './Button/button';
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
-import Mercury from './Mercury/Mercury';
+import Mercury from './Mercury/mercury';
 import Earth from './Earth/Earth';
 import Neptune from './Neptune/neptune';
 import Mars from './Mars/Mars';
