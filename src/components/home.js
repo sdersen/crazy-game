@@ -47,6 +47,11 @@ function Home() {
     display: 'inherit',
     posotion: 'absolute',
   };
+  const textBoxStyle = {
+    position: 'absolute',
+    top: '-100px',
+    left: '-30px',
+  };
 
   return (
     <div className="App">
@@ -76,9 +81,9 @@ function Home() {
             />
           </div>
         </Html>
+        <Introtext style={textBoxStyle} />
         <Button handleClick={parentToChild} />
         <Suspense>
-          <Introtext />
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
