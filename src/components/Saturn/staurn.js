@@ -6,13 +6,13 @@ import SaturnMass from './saturnMass';
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0));
 
   return (
     <mesh
       onClick={handleClick}
       ref={mesh}
-      position={[0, 0, 0]}
+      position={[0, 0, 20]}
       visible
       args={[1, 200, 400]}
       scale={1}

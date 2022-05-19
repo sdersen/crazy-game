@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import Texture from '../../assets/images/saturn.webp';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
-import Ring from "./saturnRing"
+import Ring from './saturnRing';
 
 export default function SaturnMass(props) {
   const colorMap = useLoader(TextureLoader, Texture);
@@ -13,7 +13,7 @@ export default function SaturnMass(props) {
     <mesh ref={mesh} position={[0, 0, 7]} scale={0.7}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
-      <Ring/>
+      <Ring />
     </mesh>
   );
 }

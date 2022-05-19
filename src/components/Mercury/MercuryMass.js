@@ -9,7 +9,7 @@ export default function MercuryMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 4]} scale={0.7}>
+    <mesh ref={mesh} position={[0, 0, 20]} scale={0.5}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

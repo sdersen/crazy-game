@@ -5,8 +5,8 @@ import MercuryMass from './MercuryMass';
 
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
-  
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+
+  useFrame((state, delta) => (mesh.current.rotation.y += 0));
 
   return (
     <mesh

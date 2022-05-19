@@ -9,7 +9,7 @@ export default function VenusMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 9]} scale={1}>
+    <mesh ref={mesh} position={[0, 0, 22]} scale={1}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

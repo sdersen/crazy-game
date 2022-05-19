@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Neptune({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.001));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0));
 
   return (
     <mesh

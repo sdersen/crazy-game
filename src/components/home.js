@@ -58,16 +58,16 @@ function Home() {
         </Html>
         <Button handleClick={parentToChild} />
         <Suspense>
-          <Introtext />
+          {/* <Introtext /> */}
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
+          <Venus handleClick={() => nav('/venus')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
-          <Jupiter handleClick={() => nav('/jupiter')} />
+          {/* <Jupiter handleClick={() => nav('/jupiter')} />
           <Uranus handleClick={() => nav('/uranus')} />
           <Saturn handleClick={() => nav('/saturn')} />
-          <Venus handleClick={() => nav('/venus')} />
-          <Neptune handleClick={() => nav('/netptune')} />
+          <Neptune handleClick={() => nav('/netptune')} /> */}
         </Suspense>
       </Canvas>
     </div>

@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Uranus({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0));
 
   return (
     <mesh
