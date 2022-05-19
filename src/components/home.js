@@ -1,8 +1,8 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars, Html } from '@react-three/drei';
-import { AiFillPlayCircle } from 'react-icons/ai';
-import { AiFillPauseCircle } from 'react-icons/ai';
+import { GiSpeaker } from 'react-icons/gi';
+import { GiSpeakerOff } from 'react-icons/gi';
 
 import Button from './Button/button';
 import Sun from './Sun';
@@ -19,21 +19,33 @@ import { useNavigate } from 'react-router-dom';
 import IntroMusic from '../assets/audio/cosmic-glow.mp3';
 
 function Home() {
-  let audio = new Audio(IntroMusic);
+  const audio = useRef(new Audio(IntroMusic));
 
   let [trueOrbit, setTrueOrbit] = useState(false);
+  let [play, setPlay] = useState(false);
+
   function parentToChild() {
     trueOrbit ? setTrueOrbit(false) : setTrueOrbit(true);
   }
-  //hej
+
   let navigate = useNavigate();
   function nav(planet) {
     navigate(planet);
   }
   const mystyle = {
     position: 'absolute',
-    top: '-300px',
-    left: '-30px',
+    top: '-320px',
+    left: '-20px',
+  };
+  const hidden = {
+    display: 'none',
+  };
+  const visible = {
+    display: 'inherit',
+  };
+  const visibleAbsolute = {
+    display: 'inherit',
+    posotion: 'absolute',
   };
 
   return (
@@ -43,16 +55,24 @@ function Home() {
         <Stars />
         <ambientLight intensity={0.2} />
         <Html style={mystyle}>
-          <div style={{ display: 'flex' }}>
-            <AiFillPlayCircle
-              onClick={() => audio.play()}
-              size="40px"
+          <div>
+            <GiSpeaker
+              onClick={() => {
+                audio.current.play();
+                setPlay(true);
+              }}
+              size="30px"
               fill="white"
+              style={play ? hidden : visible}
             />
-            <AiFillPauseCircle
-              onClick={() => audio.pause()}
-              size="40px"
+            <GiSpeakerOff
+              onClick={() => {
+                audio.current.pause();
+                setPlay(false);
+              }}
+              size="30px"
               fill="white"
+              style={play ? visibleAbsolute : hidden}
             />
           </div>
         </Html>
