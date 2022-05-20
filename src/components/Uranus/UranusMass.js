@@ -9,7 +9,7 @@ export default function UranusMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 30]} scale={2}>
+    <mesh ref={mesh} position={[0, 0, 150]} scale={2.5}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

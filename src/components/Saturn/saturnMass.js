@@ -10,7 +10,7 @@ export default function SaturnMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 7]} scale={0.7}>
+    <mesh ref={mesh} position={[0, 0, 90]} scale={4}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
       <Ring />

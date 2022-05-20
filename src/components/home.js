@@ -64,10 +64,10 @@ function Home() {
           <Venus handleClick={() => nav('/venus')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
-          {/* <Jupiter handleClick={() => nav('/jupiter')} />
-          <Uranus handleClick={() => nav('/uranus')} />
+          <Jupiter handleClick={() => nav('/jupiter')} />
           <Saturn handleClick={() => nav('/saturn')} />
-          <Neptune handleClick={() => nav('/netptune')} /> */}
+          <Uranus handleClick={() => nav('/uranus')} />
+          <Neptune handleClick={() => nav('/netptune')} />
         </Suspense>
       </Canvas>
     </div>

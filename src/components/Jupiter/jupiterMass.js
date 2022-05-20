@@ -9,7 +9,7 @@ export default function JupiterMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 10]} scale={2}>
+    <mesh ref={mesh} position={[0, 0, 22]} scale={2}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
