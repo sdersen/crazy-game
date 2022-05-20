@@ -5,13 +5,13 @@ import { useFrame } from '@react-three/fiber';
 export default function Jupiter({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.0));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.002));
 
   return (
     <mesh
       onClick={handleClick}
       ref={mesh}
-      position={[0, 0, 0]}
+      position={[10, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={3}

@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
 
 export default function Earth({ parentToChild }) {
-  const [orbit, setOrbit] = useState(0.0);
+  const [orbit, setOrbit] = useState(0.01);
 
   const getOrbit = async () => {
     const response = await fetch(

@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Venus({ state, delta, handleClick }) {
   const mesh = useRef();
   // 224 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.0));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
     <mesh
