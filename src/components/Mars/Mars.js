@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber';
 export default function Mars({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.003));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0122));
 
   return (
     <mesh
@@ -14,7 +14,7 @@ export default function Mars({ state, delta, handleClick }) {
       position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
-      scale={1}
+      scale={1.2}
     >
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <MarsMass />

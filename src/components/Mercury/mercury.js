@@ -6,13 +6,14 @@ import MercuryMass from './MercuryMass';
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.017));
+
 
   return (
     <mesh
       onClick={handleClick}
       ref={mesh}
-      position={[0, 0, 0]}
+      position={[5, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={1}

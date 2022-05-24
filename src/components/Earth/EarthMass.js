@@ -9,7 +9,7 @@ export default function EarthMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 13]} scale={1}>
+    <mesh ref={mesh} position={[0, 0, 25]} scale={1.2}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

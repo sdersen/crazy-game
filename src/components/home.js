@@ -25,6 +25,7 @@ function Home() {
   let [play, setPlay] = useState(false);
 
   function parentToChild() {
+
     trueOrbit ? setTrueOrbit(false) : setTrueOrbit(true);
   }
 
@@ -86,12 +87,12 @@ function Home() {
         <Suspense>
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
+          <Venus handleClick={() => nav('/venus')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
           <Jupiter handleClick={() => nav('/jupiter')} />
-          <Uranus handleClick={() => nav('/uranus')} />
           <Saturn handleClick={() => nav('/saturn')} />
-          <Venus handleClick={() => nav('/venus')} />
+          <Uranus handleClick={() => nav('/uranus')} />
           <Neptune handleClick={() => nav('/netptune')} />
         </Suspense>
       </Canvas>

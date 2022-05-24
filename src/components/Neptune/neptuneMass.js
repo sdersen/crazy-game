@@ -9,7 +9,7 @@ export default function NeptuneMass(props) {
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
 
   return (
-    <mesh ref={mesh} position={[0, 0, 50]} scale={1}>
+    <mesh ref={mesh} position={[0, 0, 200]} scale={1}>
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>

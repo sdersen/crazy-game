@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
 
 export default function Earth({ parentToChild }) {
-  const [orbit, setOrbit] = useState(0.001);
+  const [orbit, setOrbit] = useState(0.01);
 
   const getOrbit = async () => {
     const response = await fetch(
@@ -27,7 +27,7 @@ export default function Earth({ parentToChild }) {
       position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
-      scale={1}
+      scale={1.2}
     >
       <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
       <EarthMass />
