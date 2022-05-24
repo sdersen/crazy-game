@@ -8,6 +8,7 @@ export default function Mercury({ state, delta, handleClick }) {
 
   useFrame((state, delta) => (mesh.current.rotation.y += 0.017));
 
+
   return (
     <mesh
       onClick={handleClick}
@@ -17,7 +18,7 @@ export default function Mercury({ state, delta, handleClick }) {
       args={[1, 200, 400]}
       scale={1}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <MercuryMass />
     </mesh>
   );

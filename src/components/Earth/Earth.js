@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import EarthMass from './EarthMass';
 
@@ -13,10 +13,10 @@ export default function Earth({ parentToChild }) {
 
     setOrbit(data.sideralOrbit / 100000);
   };
-  console.log(parentToChild);
-  if (parentToChild) {
-    getOrbit();
-  }
+
+  useEffect(() => {
+    parentToChild ? getOrbit() : setOrbit(0.001);
+  }, [parentToChild]);
 
   const mesh = useRef();
 

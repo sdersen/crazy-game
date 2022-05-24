@@ -17,7 +17,7 @@ export default function Mercury({ state, delta, handleClick }) {
       args={[1, 200, 400]}
       scale={1}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <SaturnMass />
     </mesh>
   );

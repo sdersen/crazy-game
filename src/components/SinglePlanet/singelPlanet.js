@@ -16,19 +16,19 @@ function SinglePlanet(props) {
   }, [params.planet]);
 
   return (
-    <div className="App">
+    <div className='App'>
       <Canvas>
         <OrbitControls />
         <Stars />
         <ambientLight intensity={0.7} />
         <Suspense>
           <TextCard
-          name={planet.englishName}
-          text={planet.bodyType}
-          gravity={planet.gravity}
-          orbit={planet.sideralOrbit}
-          hours={planet.sideralRotation}/>
-
+            name={planet.englishName}
+            text={planet.bodyType}
+            gravity={planet.gravity}
+            orbit={planet.sideralOrbit}
+            hours={planet.sideralRotation}
+          />
         </Suspense>
       </Canvas>
     </div>

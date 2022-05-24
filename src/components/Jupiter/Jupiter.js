@@ -16,7 +16,7 @@ export default function Jupiter({ state, delta, handleClick }) {
       args={[1, 200, 400]}
       scale={3}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <JupiterMass />
     </mesh>
   );
