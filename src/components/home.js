@@ -4,9 +4,7 @@ import { OrbitControls, Stars, Html } from '@react-three/drei';
 import { GiSpeaker } from 'react-icons/gi';
 import { GiSpeakerOff } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
-
 import Button2 from './Button/buttonTwo';
-
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
