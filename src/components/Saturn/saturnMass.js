@@ -4,7 +4,7 @@ import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import Ring from './saturnRing';
 
-export default function SaturnMass(props, { handleClick }) {
+export default function SaturnMass({ handleClick, state, delta }) {
   const colorMap = useLoader(TextureLoader, Texture);
   const mesh = useRef();
   useFrame((state, delta) => (mesh.current.rotation.y += 0.01));

@@ -1,5 +1,5 @@
 const btnStyle = {
-  width: '100px',
+  width: '150px',
   backgroundColor: 'transparent',
   color: 'white',
   border: 'solid 2px white',
