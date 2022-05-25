@@ -21,8 +21,8 @@ export default function Mercury({ state, delta, handleClick }) {
         handleClick={handleClick}
         texture={Texture}
         rotation={0.01}
-        position={[0, 0, 20]}
-        scale={0.5}
+        position={[0, 0, 13]}
+        scale={2.5}
       />
     </mesh>
   );

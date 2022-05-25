@@ -6,7 +6,7 @@ import Texture from '../../assets/images/uranus.webp';
 export default function Uranus({ state, delta, handleClick }) {
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0005));
 
   return (
     <mesh
@@ -20,8 +20,8 @@ export default function Uranus({ state, delta, handleClick }) {
       <PlanetMass
         handleClick={handleClick}
         texture={Texture}
-        position={[0, 0, 150]}
-        scale={2.5}
+        position={[0, 0, 110]}
+        scale={3}
         rotation={0.01}
       />
     </mesh>

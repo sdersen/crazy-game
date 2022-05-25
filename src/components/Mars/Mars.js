@@ -21,8 +21,8 @@ export default function Mars({ state, delta, handleClick }) {
         handleClick={handleClick}
         texture={Texture}
         rotation={0.01}
-        position={[0, 0, 30]}
-        scale={0.9}
+        position={[5, 0, 30]}
+        scale={2.1}
       />
     </mesh>
   );
