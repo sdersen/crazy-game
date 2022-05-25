@@ -5,7 +5,6 @@ import Texture from '../../assets/images/neptune.webp';
 
 export default function Neptune({ state, delta, handleClick }) {
   const mesh = useRef();
-
   useFrame((state, delta) => (mesh.current.rotation.y += 0.0007));
 
   return (
