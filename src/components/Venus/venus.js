@@ -10,7 +10,6 @@ export default function Venus({ state, delta, handleClick }) {
 
   return (
     <mesh
-      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible
