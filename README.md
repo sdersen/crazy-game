@@ -2,7 +2,7 @@
 
 # The Amazing Planetarium
 
-This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each 
+This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each
 
 # Installation
 

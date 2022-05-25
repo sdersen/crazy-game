@@ -8,7 +8,7 @@ extend({ TextGeometry });
 export default function TextCard({ name, text, gravity, orbit, hours }) {
   return (
     <mesh position={[0, 0, 0]} rotation={[0, 0, 0]}>
-      <Html style={{ top: '-200px', left: "-110px", width: "160px" }}>
+      <Html style={{ top: '-200px', left: '-110px', width: '160px' }}>
         <div>
           <h1 style={{ color: 'white' }}>{name}</h1>
           <h3 style={{ color: 'white' }}>Body type:</h3>
