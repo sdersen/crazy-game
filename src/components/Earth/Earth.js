@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import EarthMass from './EarthMass';
+import PlanetMass from '../PlanetMass/PlanetMass';
+import Texture from '../../assets/images/earth.jpeg';
 
-export default function Earth({ parentToChild }) {
+export default function Earth({ parentToChild, handleClick, state, delta }) {
   const [orbit, setOrbit] = useState(0.01);
 
   const getOrbit = async () => {
@@ -19,8 +20,8 @@ export default function Earth({ parentToChild }) {
   }, [parentToChild]);
 
   const mesh = useRef();
-
   useFrame((state, delta) => (mesh.current.rotation.y += orbit));
+
   return (
     <mesh
       ref={mesh}
@@ -29,8 +30,14 @@ export default function Earth({ parentToChild }) {
       args={[1, 200, 400]}
       scale={1.2}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
-      <EarthMass />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
+      <PlanetMass
+        handleClick={handleClick}
+        texture={Texture}
+        scale={1.2}
+        position={[0, 0, 25]}
+        rotation={0.01}
+      />
     </mesh>
   );
 }

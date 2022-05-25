@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-
 import { useFrame } from '@react-three/fiber';
 import SaturnMass from './saturnMass';
 
@@ -10,7 +9,6 @@ export default function Mercury({ state, delta, handleClick }) {
 
   return (
     <mesh
-      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 20]}
       visible
@@ -18,7 +16,7 @@ export default function Mercury({ state, delta, handleClick }) {
       scale={1}
     >
       <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
-      <SaturnMass />
+      <SaturnMass handleClick={handleClick} />
     </mesh>
   );
 }

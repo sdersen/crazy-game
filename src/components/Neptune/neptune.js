@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import NeptuneMass from './neptuneMass';
 import { useFrame } from '@react-three/fiber';
+import PlanetMass from '../PlanetMass/PlanetMass';
+import Texture from '../../assets/images/neptune.webp';
 
 export default function Neptune({ state, delta, handleClick }) {
   const mesh = useRef();
@@ -9,15 +10,20 @@ export default function Neptune({ state, delta, handleClick }) {
 
   return (
     <mesh
-      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={1}
     >
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
-      <NeptuneMass />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
+      <PlanetMass
+        handleClick={handleClick}
+        texture={Texture}
+        rotation={0.01}
+        position={[0, 0, 200]}
+        scale={1}
+      />
     </mesh>
   );
 }

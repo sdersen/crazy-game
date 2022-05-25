@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import JupiterMass from './jupiterMass';
 import { useFrame } from '@react-three/fiber';
+import PlanetMass from '../PlanetMass/PlanetMass';
+import Texture from '../../assets/images/jupiter.webp';
 
 export default function Jupiter({ state, delta, handleClick }) {
   const mesh = useRef();
@@ -17,7 +18,13 @@ export default function Jupiter({ state, delta, handleClick }) {
       scale={3}
     >
       <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
-      <JupiterMass />
+      <PlanetMass
+        handleClick={handleClick}
+        position={[0, 0, 22]}
+        scale={2}
+        rotation={0.01}
+        texture={Texture}
+      />
     </mesh>
   );
 }
