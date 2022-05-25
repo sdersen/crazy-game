@@ -10,9 +10,9 @@ export default function Sun(props) {
 
   const colorMap = useLoader(TextureLoader, Texture);
   return (
-    <Sphere ref={sphere} visible args={[1, 200, 400]} scale={15}>
+    <Sphere ref={sphere} visible args={[1, 200, 400]} scale={7}>
       <meshStandardMaterial map={colorMap} />
-      <pointLight color="orange" intensity={4} distance={1000} />
+      <pointLight color='orange' intensity={4} distance={1000} />
       <ambientLight intensity={0.3} />
     </Sphere>
   );

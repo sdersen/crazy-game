@@ -6,7 +6,7 @@ import Texture from '../../assets/images/venus.webp';
 export default function Venus({ state, delta, handleClick }) {
   const mesh = useRef();
   // 224 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
 
   return (
     <mesh
@@ -20,9 +20,9 @@ export default function Venus({ state, delta, handleClick }) {
       <PlanetMass
         handleClick={handleClick}
         texture={Texture}
-        position={[0, 0, 20]}
+        position={[0, 0, 18]}
         rotation={0.02}
-        scale={1}
+        scale={2}
       />
     </mesh>
   );

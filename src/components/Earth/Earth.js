@@ -34,7 +34,7 @@ export default function Earth({ parentToChild, handleClick, state, delta }) {
       <PlanetMass
         handleClick={handleClick}
         texture={Texture}
-        scale={1.2}
+        scale={2}
         position={[0, 0, 25]}
         rotation={0.01}
       />

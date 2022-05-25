@@ -20,7 +20,7 @@ export default function Jupiter({ state, delta, handleClick }) {
       <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <PlanetMass
         handleClick={handleClick}
-        position={[0, 0, 22]}
+        position={[0, 0, 18]}
         scale={2}
         rotation={0.01}
         texture={Texture}

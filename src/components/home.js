@@ -4,9 +4,7 @@ import { OrbitControls, Stars, Html } from '@react-three/drei';
 import { GiSpeaker } from 'react-icons/gi';
 import { GiSpeakerOff } from 'react-icons/gi';
 import { useNavigate } from 'react-router-dom';
-
 import Button2 from './Button/buttonTwo';
-
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
@@ -58,7 +56,7 @@ function Home() {
 
   return (
     <div className='App'>
-      <Canvas>
+      <Canvas camera={{ fov: 75, position: [-10, 45, 20] }}>
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
@@ -93,7 +91,7 @@ function Home() {
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
           <Venus handleClick={() => nav('/venus')} />
-          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')}/>
+          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
           <Jupiter handleClick={() => nav('/jupiter')} />
           <Saturn handleClick={() => nav('/saturn')} />

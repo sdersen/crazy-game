@@ -10,7 +10,7 @@ export default function SaturnMass(props) {
 
   return (
     <mesh ref={mesh} position={[0, 0, 0]} scale={1} rotation={[55, 0, 0]}>
-      <ringGeometry attach="geometry" args={[1.3, 2.3, 32]} />
+      <ringGeometry attach='geometry' args={[1.3, 2.3, 32]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
   );

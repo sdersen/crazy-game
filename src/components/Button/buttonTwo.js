@@ -4,7 +4,7 @@ const btnStyle = {
   color: 'white',
   border: 'solid 2px white',
   borderRadius: '10px',
-  marginLeft: "20px"
+  marginLeft: '20px',
 };
 
 export default function Button({ handleClick, text }) {
