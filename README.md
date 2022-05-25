@@ -1,14 +1,18 @@
-INSERT MANDATORY GIF
+<img src="https://giphy.com/gifs/cute-space-astronaut-xT8qBhrlNooHBYR9f2" width="100%">
 
-# Project Title
+# The Amazing Planetarium
 
-Text about the project and which JavaScript library you're using. This would also be a great place to link the game on Netlify.
+This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each 
 
 # Installation
 
-Add the installation instructions.
+Clone the project and run `npm install` and then `npm start`. Or visit [The Amazing Planetarium](https://amazing-planetarium.netlify.app/)
 
 # Changelog
+
+<details>
+<summary>View entire changelog</summary>
+<br>
 
 -   [#1 - React set-up, created canvas, spher and stary skies.](https://github.com/sdersen/crazy-game/pull/1)
 -   [#2 - Added textures and Roboto-fonts.](https://github.com/sdersen/crazy-game/pull/2)
@@ -32,6 +36,7 @@ Add the installation instructions.
 -   [#21 - Toogle play/paus btn](https://github.com/sdersen/crazy-game/pull/21)
 -   [#22 - State on introText in localstorage](https://github.com/sdersen/crazy-game/pull/22)
 -   [#23 - Animation and pace of orbit](https://github.com/sdersen/crazy-game/pull/23)
+</details>
 
 # Code Review
 

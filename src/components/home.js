@@ -34,7 +34,7 @@ function Home() {
   const mystyle = {
     position: 'absolute',
     top: '-320px',
-    left: '-70px',
+    left: '-110px',
     display: 'flex',
     margin: '20px',
   };
@@ -83,7 +83,7 @@ function Home() {
           </div>
           <Button2
             handleClick={parentToChild}
-            text={trueOrbit ? 'Ok go back' : 'True Orbits'}
+            text={trueOrbit ? 'User friendly orbits' : 'True orbits'}
           ></Button2>
         </Html>
         <Introtext style={textBoxStyle} />
@@ -96,7 +96,7 @@ function Home() {
           <Jupiter handleClick={() => nav('/jupiter')} />
           <Saturn handleClick={() => nav('/saturn')} />
           <Uranus handleClick={() => nav('/uranus')} />
-          <Neptune handleClick={() => nav('/netptune')} />
+          <Neptune handleClick={() => nav('/neptune')} />
         </Suspense>
       </Canvas>
     </div>
