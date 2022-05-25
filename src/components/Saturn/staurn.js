@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
+import Texture from '../../assets/images/saturn.webp';
 
 import { useFrame } from '@react-three/fiber';
 import SaturnMass from './saturnMass';
+import SaturnRing from './saturnRing';
+import PlanetMass from '../PlanetMass/PlanetMass';
 
 export default function Mercury({ state, delta, handleClick }) {
   const mesh = useRef();
@@ -18,7 +21,7 @@ export default function Mercury({ state, delta, handleClick }) {
       scale={1}
     >
       <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
-      <SaturnMass />
+      <SaturnMass handleClick={handleClick} />
     </mesh>
   );
 }

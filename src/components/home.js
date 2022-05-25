@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars, Html } from '@react-three/drei';
 import { GiSpeaker } from 'react-icons/gi';
 import { GiSpeakerOff } from 'react-icons/gi';
+import { useNavigate } from 'react-router-dom';
 
 import Button from './Button/button';
 import Sun from './Sun';
@@ -15,7 +16,6 @@ import Mars from './Mars/Mars';
 import Uranus from './Uranus/Uranus';
 import Saturn from './Saturn/staurn';
 import Introtext from './introtext';
-import { useNavigate } from 'react-router-dom';
 import IntroMusic from '../assets/audio/cosmic-glow.mp3';
 
 function Home() {
@@ -88,7 +88,7 @@ function Home() {
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
           <Venus handleClick={() => nav('/venus')} />
-          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
+          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')}/>
           <Mars handleClick={() => nav('/mars')} />
           <Jupiter handleClick={() => nav('/jupiter')} />
           <Saturn handleClick={() => nav('/saturn')} />
