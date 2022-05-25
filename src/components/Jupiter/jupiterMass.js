@@ -10,7 +10,7 @@ export default function JupiterMass(props) {
 
   return (
     <mesh ref={mesh} position={[0, 0, 22]} scale={2}>
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
   );

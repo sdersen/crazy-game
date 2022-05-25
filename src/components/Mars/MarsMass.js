@@ -10,7 +10,7 @@ export default function MarsMass(props) {
 
   return (
     <mesh ref={mesh} position={[0, 0, 30]} scale={0.9}>
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
   );

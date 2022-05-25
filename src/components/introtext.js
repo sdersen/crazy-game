@@ -26,8 +26,8 @@ export default function IntroText() {
         <Html>
           <div style={divStyle}>
             <AiOutlineCloseCircle
-              size="40px"
-              fill="white"
+              size='40px'
+              fill='white'
               onClick={() => setActive(true)}
             />
             <h1 style={{ color: 'white' }}>The amazing planitarium</h1>
@@ -36,7 +36,8 @@ export default function IntroText() {
               real orbits around the sun.
             </h4>
             <h4 style={{ color: 'white' }}>
-              Navigate using your mouse and zoom. Click on each planet for more info.
+              Navigate using your mouse and zoom. Click on each planet for more
+              info.
             </h4>
           </div>
         </Html>

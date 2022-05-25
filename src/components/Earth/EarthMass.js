@@ -10,7 +10,7 @@ export default function EarthMass(props) {
 
   return (
     <mesh ref={mesh} position={[0, 0, 25]} scale={1.2}>
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
   );

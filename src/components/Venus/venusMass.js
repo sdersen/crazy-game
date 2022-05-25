@@ -10,7 +10,7 @@ export default function VenusMass(props) {
 
   return (
     <mesh ref={mesh} position={[10, 0, 20]} scale={1}>
-      <sphereBufferGeometry attach="geometry" args={[1, 100, 100]} />
+      <sphereBufferGeometry attach='geometry' args={[1, 100, 100]} />
       <meshStandardMaterial map={colorMap} />
     </mesh>
   );

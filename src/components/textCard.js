@@ -23,7 +23,7 @@ export default function TextCard({ name, text, gravity, orbit, hours }) {
           <p style={{ color: 'white' }}>{hours} h</p>
         </div>
       </Html>
-      <meshPhysicalMaterial attach="material" color={'white'} />
+      <meshPhysicalMaterial attach='material' color={'white'} />
     </mesh>
   );
 }

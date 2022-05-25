@@ -33,7 +33,6 @@ Add the installation instructions.
 -   [#22 - State on introText in localstorage](https://github.com/sdersen/crazy-game/pull/22)
 -   [#23 - Animation and pace of orbit](https://github.com/sdersen/crazy-game/pull/23)
 
-
 # Code Review
 
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.

@@ -93,7 +93,7 @@ function Home() {
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />
           <Venus handleClick={() => nav('/venus')} />
-          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')}/>
+          <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
           <Mars handleClick={() => nav('/mars')} />
           <Jupiter handleClick={() => nav('/jupiter')} />
           <Saturn handleClick={() => nav('/saturn')} />
