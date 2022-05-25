@@ -56,7 +56,7 @@ function Home() {
 
   return (
     <div className='App'>
-      <Canvas>
+      <Canvas camera={{ fov: 75, position: [-10, 45, 20] }}>
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
