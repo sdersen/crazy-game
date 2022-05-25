@@ -4,7 +4,8 @@ import { OrbitControls, Stars, Html } from '@react-three/drei';
 import { GiSpeaker } from 'react-icons/gi';
 import { GiSpeakerOff } from 'react-icons/gi';
 
-import Button from './Button/button';
+import Button2 from './Button/buttonTwo';
+
 import Sun from './Sun';
 import Jupiter from './Jupiter/Jupiter';
 import Venus from './Venus/venus';
@@ -25,7 +26,6 @@ function Home() {
   let [play, setPlay] = useState(false);
 
   function parentToChild() {
-
     trueOrbit ? setTrueOrbit(false) : setTrueOrbit(true);
   }
 
@@ -36,7 +36,9 @@ function Home() {
   const mystyle = {
     position: 'absolute',
     top: '-320px',
-    left: '-20px',
+    left: '-70px',
+    display: 'flex',
+    margin: '20px',
   };
   const hidden = {
     display: 'none',
@@ -55,35 +57,38 @@ function Home() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Canvas>
         <OrbitControls enableZoom={true} />
         <Stars />
         <ambientLight intensity={0.2} />
         <Html style={mystyle}>
           <div>
-            <GiSpeaker
+            <GiSpeakerOff
               onClick={() => {
                 audio.current.play();
                 setPlay(true);
               }}
-              size="30px"
-              fill="white"
+              size='30px'
+              fill='white'
               style={play ? hidden : visible}
             />
-            <GiSpeakerOff
+            <GiSpeaker
               onClick={() => {
                 audio.current.pause();
                 setPlay(false);
               }}
-              size="30px"
-              fill="white"
+              size='30px'
+              fill='white'
               style={play ? visibleAbsolute : hidden}
             />
           </div>
+          <Button2
+            handleClick={parentToChild}
+            text={trueOrbit ? 'Ok go back' : 'True Orbits'}
+          ></Button2>
         </Html>
         <Introtext style={textBoxStyle} />
-        <Button handleClick={parentToChild} />
         <Suspense>
           <Sun />
           <Mercury handleClick={() => nav('/mercury')} />

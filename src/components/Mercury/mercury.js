@@ -13,7 +13,7 @@ export default function Mercury({ state, delta, handleClick }) {
     <mesh
       onClick={handleClick}
       ref={mesh}
-      position={[5, 0, 0]}
+      position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={1}

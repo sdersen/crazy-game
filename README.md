@@ -22,6 +22,16 @@ Add the installation instructions.
 -   [#10 - Mars and it's orbit](https://github.com/sdersen/crazy-game/pull/10)
 -   [#11 - Uranus and it's orbit](https://github.com/sdersen/crazy-game/pull/11)
 -   [#12 - Saturn and it's ring and Orbit](https://github.com/sdersen/crazy-game/pull/12)
+-   [#13 - New structure including routes ](https://github.com/sdersen/crazy-game/pull/13)
+-   [#14 - Change of Router and fetch for singlePlanet](https://github.com/sdersen/crazy-game/pull/14)
+-   [#15 - Completion singlePlanet info and Intro-info](https://github.com/sdersen/crazy-game/pull/15)
+-   [#16 - Audio w play/pause function](https://github.com/sdersen/crazy-game/pull/16)
+-   [#18 - Real orbit logic](https://github.com/sdersen/crazy-game/pull/18)
+-   [#19 - Removed unused code and comments](https://github.com/sdersen/crazy-game/pull/19)
+-   [#20 - Toggle on trueOrbit onClick](https://github.com/sdersen/crazy-game/pull/20)
+-   [#21 - Toogle play/paus btn](https://github.com/sdersen/crazy-game/pull/21)
+-   [#22 - State on introText in localstorage](https://github.com/sdersen/crazy-game/pull/22)
+-   [#23 - Animation and pace of orbit](https://github.com/sdersen/crazy-game/pull/23)
 
 
 # Code Review

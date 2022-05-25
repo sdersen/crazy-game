@@ -32,12 +32,11 @@ export default function IntroText() {
             />
             <h1 style={{ color: 'white' }}>The amazing planitarium</h1>
             <h4 style={{ color: 'white' }}>
-              Here you can visit our solar system in 3D, see the planets on ther
-              real orbits around the sun. And click on each planet for mire
-              info.
+              Experience our solar system in 3D and see the planets on their
+              real orbits around the sun.
             </h4>
             <h4 style={{ color: 'white' }}>
-              Navigate using your mouse and zoom
+              Navigate using your mouse and zoom. Click on each planet for more info.
             </h4>
           </div>
         </Html>
