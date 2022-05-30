@@ -1,12 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
 import Texture from '../../assets/images/venus.webp';
+import { getOrbit } from '../functions';
 
-export default function Venus({ state, delta, handleClick }) {
+export default function Venus({ state, delta, handleClick, parentToChild }) {
+  const [orbit, setOrbit] = useState(0.0015);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.0015);
+    })();
+  }, [parentToChild]);
+
   const mesh = useRef();
-  // 224 dagar runt solen
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
+  useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh
@@ -21,7 +29,7 @@ export default function Venus({ state, delta, handleClick }) {
         handleClick={handleClick}
         texture={Texture}
         position={[0, 0, 18]}
-        rotation={0.02}
+        rotation={0.01}
         scale={2}
       />
     </mesh>

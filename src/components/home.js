@@ -16,42 +16,27 @@ import Uranus from './Uranus/Uranus';
 import Saturn from './Saturn/staurn';
 import Introtext from './introtext';
 import IntroMusic from '../assets/audio/cosmic-glow.mp3';
+import {
+  mystyle,
+  hidden,
+  visible,
+  visibleAbsolute,
+  textBoxStyle,
+} from '../components/styles';
 
 function Home() {
   const audio = useRef(new Audio(IntroMusic));
 
-  let [trueOrbit, setTrueOrbit] = useState(false);
-  let [play, setPlay] = useState(false);
+  const [trueOrbit, setTrueOrbit] = useState(false);
+  const [play, setPlay] = useState(false);
 
-  function parentToChild() {
+  const parentToChild = () => {
     trueOrbit ? setTrueOrbit(false) : setTrueOrbit(true);
-  }
+  };
 
   let navigate = useNavigate();
-  function nav(planet) {
+  const nav = (planet) => {
     navigate(planet);
-  }
-  const mystyle = {
-    position: 'absolute',
-    top: '-320px',
-    left: '-110px',
-    display: 'flex',
-    margin: '20px',
-  };
-  const hidden = {
-    display: 'none',
-  };
-  const visible = {
-    display: 'inherit',
-  };
-  const visibleAbsolute = {
-    display: 'inherit',
-    posotion: 'absolute',
-  };
-  const textBoxStyle = {
-    position: 'absolute',
-    top: '-100px',
-    left: '-30px',
   };
 
   return (
@@ -59,7 +44,7 @@ function Home() {
       <Canvas camera={{ fov: 75, position: [-10, 45, 20] }}>
         <OrbitControls enableZoom={true} />
         <Stars />
-        <ambientLight intensity={0.2} />
+        <ambientLight intensity={0.1} />
         <Html style={mystyle}>
           <div>
             <GiSpeakerOff
@@ -89,14 +74,29 @@ function Home() {
         <Introtext style={textBoxStyle} />
         <Suspense>
           <Sun />
-          <Mercury handleClick={() => nav('/mercury')} />
-          <Venus handleClick={() => nav('/venus')} />
+          <Mercury
+            parentToChild={trueOrbit}
+            handleClick={() => nav('/mercury')}
+          />
+          <Venus parentToChild={trueOrbit} handleClick={() => nav('/venus')} />
           <Earth parentToChild={trueOrbit} handleClick={() => nav('/terre')} />
-          <Mars handleClick={() => nav('/mars')} />
-          <Jupiter handleClick={() => nav('/jupiter')} />
-          <Saturn handleClick={() => nav('/saturn')} />
-          <Uranus handleClick={() => nav('/uranus')} />
-          <Neptune handleClick={() => nav('/neptune')} />
+          <Mars parentToChild={trueOrbit} handleClick={() => nav('/mars')} />
+          <Jupiter
+            parentToChild={trueOrbit}
+            handleClick={() => nav('/jupiter')}
+          />
+          <Saturn
+            parentToChild={trueOrbit}
+            handleClick={() => nav('/saturn')}
+          />
+          <Uranus
+            parentToChild={trueOrbit}
+            handleClick={() => nav('/uranus')}
+          />
+          <Neptune
+            parentToChild={trueOrbit}
+            handleClick={() => nav('/neptune')}
+          />
         </Suspense>
       </Canvas>
     </div>

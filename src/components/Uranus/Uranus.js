@@ -1,12 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
 import Texture from '../../assets/images/uranus.webp';
+import { getOrbit } from '../functions';
 
-export default function Uranus({ state, delta, handleClick }) {
+export default function Uranus({ state, delta, handleClick, parentToChild }) {
+  const [orbit, setOrbit] = useState(0.0005);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.0005);
+    })();
+  }, [parentToChild]);
+
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.0005));
+  useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh

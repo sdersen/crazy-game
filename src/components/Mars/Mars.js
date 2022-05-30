@@ -1,12 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import Texture from '../../assets/images/mars.webp';
 import PlanetMass from '../PlanetMass/PlanetMass';
+import { getOrbit } from '../functions';
 
-export default function Mars({ state, delta, handleClick }) {
+export default function Mars({ state, delta, handleClick, parentToChild }) {
+  const [orbit, setOrbit] = useState(0.00122);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('mars')) : setOrbit(0.00122);
+    })();
+  }, [parentToChild]);
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.00122));
+  useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh

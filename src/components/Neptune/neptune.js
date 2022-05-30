@@ -1,11 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
 import Texture from '../../assets/images/neptune.webp';
+import { getOrbit } from '../functions';
 
-export default function Neptune({ state, delta, handleClick }) {
+export default function Neptune({ state, delta, handleClick, parentToChild }) {
+  const [orbit, setOrbit] = useState(0.0007);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('neptune')) : setOrbit(0.0007);
+    })();
+  }, [parentToChild]);
+
   const mesh = useRef();
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.0007));
+  useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh

@@ -1,9 +1,5 @@
 import React from 'react';
-import { extend } from '@react-three/fiber';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import { Html } from '@react-three/drei';
-
-extend({ TextGeometry });
 
 export default function TextCard({ name, text, gravity, orbit, hours }) {
   return (
@@ -21,7 +17,6 @@ export default function TextCard({ name, text, gravity, orbit, hours }) {
           <p style={{ color: 'white' }}>{hours} h</p>
         </div>
       </Html>
-      <meshPhysicalMaterial attach='material' color={'white'} />
     </mesh>
   );
 }

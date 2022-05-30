@@ -7,7 +7,7 @@ import Ring from './saturnRing';
 export default function SaturnMass({ handleClick, state, delta }) {
   const colorMap = useLoader(TextureLoader, Texture);
   const mesh = useRef();
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.0015));
 
   return (
     <mesh ref={mesh} position={[0, 0, 76]} scale={4} onClick={handleClick}>
