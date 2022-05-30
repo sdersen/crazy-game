@@ -19,12 +19,14 @@ export default function Earth({ parentToChild, handleClick, state, delta }) {
 
   useEffect(() => {
     (async () => {
-      if (parentToChild) {
-        const data = await getOrbit('terre');
-        setOrbit(data);
-      } else {
-        setOrbit(0.001);
-      }
+      parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.001);
+
+      // if (parentToChild) {
+      //   const data = await getOrbit('terre');
+      //   setOrbit(data);
+      // } else {
+      //   setOrbit(0.001);
+      // }
     })();
   }, [parentToChild]);
 
