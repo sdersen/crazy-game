@@ -36,6 +36,11 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 -   [#21 - Toogle play/paus btn](https://github.com/sdersen/crazy-game/pull/21)
 -   [#22 - State on introText in localstorage](https://github.com/sdersen/crazy-game/pull/22)
 -   [#23 - Animation and pace of orbit](https://github.com/sdersen/crazy-game/pull/23)
+-   [#24 - New orbit-btn and fix on introtext](https://github.com/sdersen/crazy-game/pull/24)
+-   [#25 - removed individual mass and created mass-component](https://github.com/sdersen/crazy-game/pull/25)
+-   [#26 - Sizes adjusted to be user friendly](https://github.com/sdersen/crazy-game/pull/26)
+-   [#27 - removed unused elements, added, favicon, updated readme](https://github.com/sdersen/crazy-game/pull/27)
+-   [#28 - Fetch for orbit in separete file](https://github.com/sdersen/crazy-game/pull/28)
 </details>
 
 # Code Review
