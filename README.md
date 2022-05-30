@@ -2,7 +2,7 @@
 
 # The Amazing Planetarium
 
-This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each
+This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each planet to read about the planet. You can also se how the real orbits of the planets looks like by pressing the button. Have fun!
 
 # Installation
 
@@ -53,12 +53,12 @@ Tested by the following people:
 
 1. Emma Hansson
 2. Albin Andersson
-3. Jane Doe
-4. John Doe
+3. Jennifer Andersson
+4. Johanna Jönsson
 
 Tested by the following muggles (non-coders):
 
-1. Jane Doe
-2. John Doe
+1. Axel Ahlman
+2. Saga Molin
 3. Jane Doe
 4. John Doe
