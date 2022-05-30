@@ -20,3 +20,11 @@ export const textBoxStyle = {
   top: '-100px',
   left: '-30px',
 };
+export const divStyle = {
+  padding: '50px',
+  width: '300px',
+  borderRadius: '20px',
+  backgroundColor: 'rgba(0,0,0, 0.5)',
+  marginTop: '-220px',
+  marginLeft: '-200px',
+};

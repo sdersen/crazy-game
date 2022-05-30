@@ -4,22 +4,21 @@ import SaturnMass from './saturnMass';
 import { getOrbit } from '../functions';
 
 export default function Mercury({ state, delta, handleClick, parentToChild }) {
-  const [orbit, setOrbit] = useState(0.003);
+  const [orbit, setOrbit] = useState(0.00035);
 
   useEffect(() => {
     (async () => {
-      parentToChild ? setOrbit(await getOrbit('saturn')) : setOrbit(0.003);
+      parentToChild ? setOrbit(await getOrbit('saturn')) : setOrbit(0.00035);
     })();
   }, [parentToChild]);
 
   const mesh = useRef();
-
   useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh
       ref={mesh}
-      position={[0, 0, 20]}
+      position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={1}

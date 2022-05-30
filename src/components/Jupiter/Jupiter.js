@@ -21,7 +21,7 @@ export default function Jupiter({ state, delta, handleClick, parentToChild }) {
     <mesh
       onClick={handleClick}
       ref={mesh}
-      position={[10, 0, 0]}
+      position={[0, 0, 0]}
       visible
       args={[1, 200, 400]}
       scale={3}
