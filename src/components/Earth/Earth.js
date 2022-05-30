@@ -2,21 +2,32 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
 import Texture from '../../assets/images/earth.jpeg';
+import { getOrbit } from '../functions';
 
 export default function Earth({ parentToChild, handleClick, state, delta }) {
   const [orbit, setOrbit] = useState(0.01);
 
-  const getOrbit = async () => {
-    const response = await fetch(
-      'https://api.le-systeme-solaire.net/rest/bodies/terre'
-    );
-    const data = await response.json();
+  // const getOrbit = async () => {
+  //   const response = await fetch(
+  //     'https://api.le-systeme-solaire.net/rest/bodies/terre'
+  //   );
+  //   const data = await response.json();
 
-    setOrbit(data.sideralOrbit / 100000);
-  };
+  //   setOrbit(data.sideralOrbit / 100000);
+  // };
+  //console.log(getOrbit('terre'));
 
   useEffect(() => {
-    parentToChild ? getOrbit() : setOrbit(0.001);
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.001);
+
+      // if (parentToChild) {
+      //   const data = await getOrbit('terre');
+      //   setOrbit(data);
+      // } else {
+      //   setOrbit(0.001);
+      // }
+    })();
   }, [parentToChild]);
 
   const mesh = useRef();
