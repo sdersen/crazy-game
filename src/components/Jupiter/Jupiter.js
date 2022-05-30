@@ -21,7 +21,6 @@ export default function Jupiter({ state, delta, handleClick, parentToChild }) {
 
   return (
     <mesh
-      onClick={handleClick}
       ref={mesh}
       position={[0, 0, 0]}
       visible
