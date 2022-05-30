@@ -5,28 +5,11 @@ import Texture from '../../assets/images/earth.jpeg';
 import { getOrbit } from '../functions';
 
 export default function Earth({ parentToChild, handleClick, state, delta }) {
-  const [orbit, setOrbit] = useState(0.01);
-
-  // const getOrbit = async () => {
-  //   const response = await fetch(
-  //     'https://api.le-systeme-solaire.net/rest/bodies/terre'
-  //   );
-  //   const data = await response.json();
-
-  //   setOrbit(data.sideralOrbit / 100000);
-  // };
-  //console.log(getOrbit('terre'));
+  const [orbit, setOrbit] = useState(0.001);
 
   useEffect(() => {
     (async () => {
       parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.001);
-
-      // if (parentToChild) {
-      //   const data = await getOrbit('terre');
-      //   setOrbit(data);
-      // } else {
-      //   setOrbit(0.001);
-      // }
     })();
   }, [parentToChild]);
 

@@ -1,11 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import SaturnMass from './saturnMass';
+import { getOrbit } from '../functions';
 
-export default function Mercury({ state, delta, handleClick }) {
+export default function Mercury({ state, delta, handleClick, parentToChild }) {
+  const [orbit, setOrbit] = useState(0.003);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setOrbit(await getOrbit('saturn')) : setOrbit(0.003);
+    })();
+  }, [parentToChild]);
+
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.003));
+  useFrame((state, delta) => (mesh.current.rotation.y += orbit));
 
   return (
     <mesh

@@ -1,12 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
 import Texture from '../../assets/images/jupiter.webp';
+import { getOrbit } from '../functions';
 
-export default function Jupiter({ state, delta, handleClick }) {
+export default function Jupiter({ state, delta, handleClick, parentToChild }) {
+  const [jupiterOrbit, setJupiterOrbit] = useState(0.01);
+
+  useEffect(() => {
+    (async () => {
+      parentToChild ? setJupiterOrbit(await getOrbit('jupiter')) : setJupiterOrbit(0.001);
+    })();
+  }, [parentToChild]);
+
   const mesh = useRef();
 
-  useFrame((state, delta) => (mesh.current.rotation.y += 0.002));
+  useFrame((state, delta) => (mesh.current.rotation.y += jupiterOrbit));
 
   return (
     <mesh
