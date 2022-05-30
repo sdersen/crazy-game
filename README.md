@@ -52,7 +52,7 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 Tested by the following people:
 
 1. Emma Hansson
-2. Albin Andersson 
+2. Albin Andersson
 3. Jane Doe
 4. John Doe
 

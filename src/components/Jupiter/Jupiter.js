@@ -9,7 +9,9 @@ export default function Jupiter({ state, delta, handleClick, parentToChild }) {
 
   useEffect(() => {
     (async () => {
-      parentToChild ? setJupiterOrbit(await getOrbit('jupiter')) : setJupiterOrbit(0.001);
+      parentToChild
+        ? setJupiterOrbit(await getOrbit('jupiter'))
+        : setJupiterOrbit(0.001);
     })();
   }, [parentToChild]);
 
