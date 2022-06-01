@@ -46,9 +46,19 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 -   [#31 - Final fixes](https://github.com/sdersen/crazy-game/pull/31)
 </details>
 
-# Code Review
+# Code Review by Chris & Simon
 
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
+1. `components/SinglePlanet/singelPlanet.js`: [minor] Spelling misstake on component.
+2. `components/Button/buttonTwo.js`: [minor] There is no buttonOne? Could maybe have a more descriptive name or just ‘button’.
+3. `assets/images/earth.jpeg`: [minor] The image might be a tad too large (~4,5mb).
+4. `general`: When visiting a planet, it would be nice with some sort of back/‘return-to-solar-system’-button.
+5. `general`: The mute function does not work after you visit a planet.
+6. `general`: Planet orbits are the wrong way around. The planet farthest from the sun orbits the sun faster than the one closest to it and so on.
+7. `general`: Instead of adding/using styles in JS, try to use CSS styles and toggle them with JS.
+8. `GIF`: The GIF in the readme is broken :(
+9. `general`: [minor] Add .DS_store to gitignore.
+10. Cool idea and well executed! Good job 👍🏼
+
 
 # Testers
 
