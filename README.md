@@ -60,5 +60,5 @@ Tested by the following muggles (non-coders):
 
 1. Axel Ahlman
 2. Saga Molin
-3. Jane Doe
-4. John Doe
+3. Carl Malmer
+4. Anna Malmer
