@@ -41,6 +41,9 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 -   [#26 - Sizes adjusted to be user friendly](https://github.com/sdersen/crazy-game/pull/26)
 -   [#27 - removed unused elements, added, favicon, updated readme](https://github.com/sdersen/crazy-game/pull/27)
 -   [#28 - Fetch for orbit in separete file](https://github.com/sdersen/crazy-game/pull/28)
+-   [#29 - Added orbit logic](https://github.com/sdersen/crazy-game/pull/29)
+-   [#30 - Update Jupiter.js](https://github.com/sdersen/crazy-game/pull/30)
+-   [#31 - Final fixes](https://github.com/sdersen/crazy-game/pull/31)
 </details>
 
 # Code Review
