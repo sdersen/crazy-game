@@ -1,8 +1,8 @@
-<img src="https://giphy.com/gifs/cute-space-astronaut-xT8qBhrlNooHBYR9f2" width="100%">
+<img src= 'https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif'>
 
 # The Amazing Planetarium
 
-This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each
+This is a school project created in react-three-fiber. You can experience our solar system and it's planets in 3D. Click on each planet to read about the planet. You can also se how the real orbits of the planets looks like by pressing the button. Have fun!
 
 # Installation
 
@@ -41,6 +41,9 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 -   [#26 - Sizes adjusted to be user friendly](https://github.com/sdersen/crazy-game/pull/26)
 -   [#27 - removed unused elements, added, favicon, updated readme](https://github.com/sdersen/crazy-game/pull/27)
 -   [#28 - Fetch for orbit in separete file](https://github.com/sdersen/crazy-game/pull/28)
+-   [#29 - Added orbit logic](https://github.com/sdersen/crazy-game/pull/29)
+-   [#30 - Update Jupiter.js](https://github.com/sdersen/crazy-game/pull/30)
+-   [#31 - Final fixes](https://github.com/sdersen/crazy-game/pull/31)
 </details>
 
 # Code Review
@@ -53,12 +56,12 @@ Tested by the following people:
 
 1. Emma Hansson
 2. Albin Andersson
-3. Jane Doe
-4. John Doe
+3. Jennifer Andersson
+4. Johanna Jönsson
 
 Tested by the following muggles (non-coders):
 
-1. Jane Doe
-2. John Doe
-3. Jane Doe
-4. John Doe
+1. Axel Ahlman
+2. Saga Molin
+3. Carl Malmer
+4. Anna Malmer
