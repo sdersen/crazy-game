@@ -4,5 +4,5 @@ export const getOrbit = async (planet) => {
   );
   const data = await response.json();
 
-  return data.sideralOrbit / 60000;
+  return 20 / data.sideralOrbit;
 };
