@@ -46,6 +46,9 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 -   [#29 - Added orbit logic](https://github.com/sdersen/crazy-game/pull/29)
 -   [#30 - Update Jupiter.js](https://github.com/sdersen/crazy-game/pull/30)
 -   [#31 - Final fixes](https://github.com/sdersen/crazy-game/pull/31)
+-   [#32 - update README.md](https://github.com/sdersen/crazy-game/pull/32)
+-   [#33 - Adjustment i orbits and resized earth image](https://github.com/sdersen/crazy-game/pull/33)
+-   [#34 - Lint](https://github.com/sdersen/crazy-game/pull/34)
 </details>
 
 # Code Review by Chris & Simon
@@ -60,7 +63,6 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 8. `GIF`: The GIF in the readme is broken :(
 9. `general`: [minor] Add .DS_store to gitignore.
 10. Cool idea and well executed! Good job 👍🏼
-
 
 # Testers
 
