@@ -37,6 +37,7 @@ function Home() {
   let navigate = useNavigate();
   const nav = (planet) => {
     navigate(planet);
+    audio.current.pause();
   };
 
   return (

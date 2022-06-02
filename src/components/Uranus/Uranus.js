@@ -9,7 +9,7 @@ export default function Uranus({ state, delta, handleClick, parentToChild }) {
 
   useEffect(() => {
     (async () => {
-      parentToChild ? setOrbit(await getOrbit('terre')) : setOrbit(0.0005);
+      parentToChild ? setOrbit(await getOrbit('uranus')) : setOrbit(0.0005);
     })();
   }, [parentToChild]);
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import PlanetMass from '../PlanetMass/PlanetMass';
-import Texture from '../../assets/images/earth.jpeg';
+import Texture from '../../assets/images/earth.webp';
 import { getOrbit } from '../functions';
 
 export default function Earth({ parentToChild, handleClick, state, delta }) {
