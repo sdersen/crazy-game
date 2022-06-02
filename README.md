@@ -1,4 +1,4 @@
-<img src="https://giphy.com/gifs/cute-space-astronaut-xT8qBhrlNooHBYR9f2" width="100%">
+<img src='https://giphy.com/gifs/cute-space-astronaut-xT8qBhrlNooHBYR9f2' width="100%">
 
 # The Amazing Planetarium
 
