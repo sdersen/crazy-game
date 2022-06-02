@@ -59,7 +59,6 @@ Clone the project and run `npm install` and then `npm start`. Or visit [The Amaz
 9. `general`: [minor] Add .DS_store to gitignore.
 10. Cool idea and well executed! Good job 👍🏼
 
-
 # Testers
 
 Tested by the following people:
